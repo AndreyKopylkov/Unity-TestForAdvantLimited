@@ -46,7 +46,7 @@ public class Business : MonoBehaviour
                 _businessUpgrades[i].ActiveBuyButton(false);
         }
 
-        _priceForNextLvl = (_businessProperties.Price + 1) * (_currentBusinessLevel + 1);
+        _priceForNextLvl = (_businessProperties.Price) * (_currentBusinessLevel + 1);
         _nameTMP.SetText(_businessProperties.Name);
         _incomeProgressBarImage.fillAmount = 0;
         _incomeDelayProgressStep = 1 / _businessProperties.IncomeDelayTimer;
@@ -81,7 +81,7 @@ public class Business : MonoBehaviour
         _currentBusinessLevel++;
         GameManager.ChangeMoney(-_priceForNextLvl);
         SafeManager.SaveBusinessLevel(_businessProperties.Name, _currentBusinessLevel);
-        _priceForNextLvl = (_businessProperties.Price + 1) * (_currentBusinessLevel + 1);
+        _priceForNextLvl = (_businessProperties.Price) * (_currentBusinessLevel + 1);
         UpdateIncome();
 
         for (int i = 0; i < _businessUpgrades.Length; i++) 
