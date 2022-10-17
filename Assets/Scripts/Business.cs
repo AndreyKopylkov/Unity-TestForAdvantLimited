@@ -113,16 +113,17 @@ public class Business : MonoBehaviour
 
     public void UpdateIncome()
     {
-        int additionalPercentageOfIncomeSum = 0;
-        for (int i = 0; i < _businessProperties.BusinessUpgradesData.Length; i++)
+        float additionalPercentageOfIncomeSum = 0;
+        for (int i = 0; i < _businessUpgrades.Length; i++)
         {
             if (_businessUpgrades[i].IsActive)
                 additionalPercentageOfIncomeSum += _businessProperties.BusinessUpgradesData[i].AdditionalPercentageOfIncome;
         }
 
         float multiplayer = 1 + (additionalPercentageOfIncomeSum / 100);
+        Debug.Log(multiplayer);
         float currentIncome = _businessProperties.Income * multiplayer * _currentBusinessLevel;
         _currentIncome = (int)currentIncome;
-        _incomeTMP.SetText((_businessProperties.Income * _currentBusinessLevel).ToString());
+        _incomeTMP.SetText((_currentIncome).ToString());
     }
 }
