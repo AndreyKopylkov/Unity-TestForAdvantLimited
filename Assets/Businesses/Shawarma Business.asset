@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4f235d9002b7247918b716e9b4f41c, type: 3}
+  m_Name: Shawarma Business
+  m_EditorClassIdentifier: 
+  _name: Shawarma Business
+  _income: 5000
+  _incomeDelayTimer: 30
+  _price: 5000
+  _businessUpgradesData:
+  - _name: Fish Shawarma
+    _price: 100000
+    _additionalPercentageOfIncome: 200
+  - _name: Cheese Lavash
+    _price: 500000
+    _additionalPercentageOfIncome: 400
